@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=
+      content="width=device-width
   , initial-scale=1.0"
     />
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clocks</title>
   </head>
 
@@ -22,31 +24,25 @@
         <option value="">Abidjan</option>
         <option value="">Quebec</option>
       </select>
-      <div class="city" id="js-city">
+      <div class="city" id="js-nairobi">
         <div class="name">
-          <span class="city-name">Nairobi 🇰🇪</span> <br>
+          <span class="city-name">Nairobi 🇰🇪</span> <br />
           <span class="date">August 8, 2024</span>
         </div>
-        <div class="time">11:47:00 <small>AM</small></div>
+        <div class="city-time" id="js-nairobi-time">
+          11:47:00 <small>AM</small>
+        </div>
       </div>
 
-      <div class="city" id="js-city">
+      <div class="city" id="js-vancouver">
         <div class="name">
-          <span class="city-name">Vancouver 🇨🇦</span> <br>
+          <span class="city-name">Vancouver 🇨🇦</span> <br />
           <span class="date">August 8, 2024</span>
         </div>
-        <div class="time">11:47:00 <small>AM</small></div>
-      </div>
-
-      <div class="city" id="js-city">
-        <div class="name">
-          <span class="city-name">Kampala 🇺🇬</span> <br>
-          <span class="date">August 8, 2024</span>
+        <div class="city-time" id="js-vancouver-time">
+          1:47:00 <small>AM</small>
         </div>
-        <div class="time">11:47:00 <small>AM</small></div>
       </div>
-
-
     </div>
 
     <footer>

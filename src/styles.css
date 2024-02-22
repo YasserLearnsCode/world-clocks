@@ -1,7 +1,58 @@
-h1 {
-  text-align: center;
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-footer{
+.container {
+  background-color: aliceblue;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 15px;
+}
+
+h1 {
+  text-align: left;
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.city {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border-bottom: 1px dashed rgba(128, 128, 128, 0.183) ;
+}
+
+.city:last-child {
+  border-bottom: none;
+}
+.city-name {
+  font-size: 36px;
+}
+
+.date {
+  color: grey;
+  font-size: 14px;
+}
+
+.time {
+  font-size: 48px;
+}
+
+small {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+footer {
   text-align: center;
 }

@@ -2,26 +2,55 @@ function updateTime() {
   //Nairobi
 
   let nairobiElement = document.querySelector("#js-nairobi");
-  let nairobiDateElement = nairobiElement.querySelector(".date");
-  let nairobiTimeElement = document.querySelector("#js-nairobi-time");
-  let nairobiTimezone = moment().tz("Africa/Nairobi");
+  if (nairobiElement) {
+    let nairobiTimezone = moment().tz("Africa/Nairobi");
+    let nairobiDateElement = document.querySelector("#js-nairobi-date");
+    let nairobiTimeElement = document.querySelector("#js-nairobi-time");
 
-  nairobiDateElement.innerHTML = nairobiTimezone.format("MMMM Do, YYYY");
-  nairobiTimeElement.innerHTML = nairobiTimezone.format(
-    "hh:mm:ss [<small>]A[<small>]"
-  );
-
+    nairobiDateElement.innerHTML = nairobiTimezone.format("MMMM Do, YYYY");
+    nairobiTimeElement.innerHTML = nairobiTimezone.format(
+      "hh:mm:ss [<small>]A[<small>]"
+    );
+  }
   //Vancouver
 
   let vancouverElement = document.querySelector("#js-vancouver");
-  let vancouverDateElement = vancouverElement.querySelector(".date");
-  let vancouverTimeElement = document.querySelector("#js-vancouver-time");
-  let vancouverTimezone = moment().tz("America/Vancouver");
+  if (vancouverElement) {
+    let vancouverDateElement = document.querySelector("#js-vancouver-date");
+    let vancouverTimeElement = document.querySelector("#js-vancouver-time");
+    let vancouverTimezone = moment().tz("America/Vancouver");
 
-  vancouverDateElement.innerHTML = vancouverTimezone.format("MMMM Do, YYYY");
-  vancouverTimeElement.innerHTML = vancouverTimezone.format(
-    "hh:mm:ss [<small>]A[<small>]"
-  );
+    vancouverDateElement.innerHTML = vancouverTimezone.format("MMMM Do, YYYY");
+    vancouverTimeElement.innerHTML = vancouverTimezone.format(
+      "hh:mm:ss [<small>]A[<small>]"
+    );
+  }
 }
 updateTime();
 setInterval(updateTime, 1000);
+
+function updateCities(event) {
+  let cityTimeZones = event.target.value;
+
+  if(cityTimeZones === "current"){
+    cityTimeZones = moment.tz.guess();
+  }
+  let cityTime = moment().tz(cityTimeZones);
+  let cityName = cityTimeZones.replace("_", " ").split("/")[1];
+  let citiesElement = document.querySelector("#js-all-cities");
+  citiesElement.innerHTML = `   
+      <div class="city" id="js-nairobi">
+        <div class="name">
+          <span class="city-name">${cityName}</span> <br />
+          <span class="date" id="js-nairobi-date">${cityTime.format(
+            "MMMM Do, YYYY"
+          )}</span>
+        </div>
+        <div class="city-time" id="js-nairobi-time">
+          ${cityTime.format("hh:mm:ss [<small>]A[<small>]")}
+        </div>
+      </div>`;
+}
+
+let citiesSelectElement = document.querySelector("#cities");
+citiesSelectElement.addEventListener("change", updateCities);

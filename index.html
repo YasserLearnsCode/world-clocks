@@ -20,27 +20,31 @@
       </header>
       <select name="cities" id="cities">
         <option value="">Select a city</option>
-        <option value="">Nairobi</option>
-        <option value="">Abidjan</option>
-        <option value="">Quebec</option>
+        <option value="current">My Location</option>
+        <option value="Europe/London">London</option>
+        <option value="Africa/Kinshasa">Kinshasa</option>
+        <option value="America/Montreal">Montreal</option>
       </select>
-      <div class="city" id="js-nairobi">
-        <div class="name">
-          <span class="city-name">Nairobi 🇰🇪</span> <br />
-          <span class="date">August 8, 2024</span>
-        </div>
-        <div class="city-time" id="js-nairobi-time">
-          11:47:00 <small>AM</small>
-        </div>
-      </div>
+      <div class="all-cities" id="js-all-cities">
 
-      <div class="city" id="js-vancouver">
-        <div class="name">
-          <span class="city-name">Vancouver 🇨🇦</span> <br />
-          <span class="date">August 8, 2024</span>
+        <div class="city" id="js-nairobi">
+          <div class="name">
+            <span class="city-name">Nairobi 🇰🇪</span> <br />
+            <span class="date" id="js-nairobi-date">August 8, 2024</span>
+          </div>
+          <div class="city-time" id="js-nairobi-time">
+            11:47:00 <small>AM</small>
+          </div>
         </div>
-        <div class="city-time" id="js-vancouver-time">
-          1:47:00 <small>AM</small>
+
+        <div class="city" id="js-vancouver">
+          <div class="name">
+            <span class="city-name">Vancouver 🇨🇦</span> <br />
+            <span class="date" id="js-vancouver-date">August 8, 2024</span>
+          </div>
+          <div class="city-time" id="js-vancouver-time">
+            1:47:00 <small>AM</small>
+          </div>
         </div>
       </div>
     </div>

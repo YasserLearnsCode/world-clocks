@@ -1,12 +1,19 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
+  background-image: url("../src/friends.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .container {
-  background-color: aliceblue;
+  background-color: rgba(255, 240, 250, 0.871);
   max-width: 600px;
   margin: 60px auto;
   padding: 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 10px;
+  margin-top: 150px;
 }
 
 h1 {
@@ -18,7 +25,7 @@ select {
   width: 100%;
   padding: 15px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 18px;
   border: none;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -36,16 +43,16 @@ select {
   border-bottom: none;
 }
 .city-name {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .date {
   color: grey;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .city-time {
-  font-size: 48px;
+  font-size: 42px;
 }
 
 small {
@@ -53,6 +60,30 @@ small {
   vertical-align: middle;
 }
 
+.button {
+  text-align: center;
+}
+
+button {
+  padding: 15px;
+  color: black;
+  background-color: rgb(249, 99, 220);
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
 footer {
   text-align: center;
+  background-color: rgba(255, 240, 250, 0.9);
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 20px;
+  margin-bottom: 100px;
 }

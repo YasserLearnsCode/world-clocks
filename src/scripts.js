@@ -76,6 +76,9 @@ function updateCities(event) {
         <div class="city-time" id="js-nairobi-time">
           ${cityTime.format("hh:mm:ss [<small>]A[<small>]")}
         </div>
+      </div>
+      <div class="button">
+       <a href="index.html"> <button>Go Back</button> </a>
       </div>`;
 }
 

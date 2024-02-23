@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  background-color: rgba(255, 240, 250, 0.871);
+  background-color: white;
   max-width: 600px;
   margin: 60px auto;
   padding: 15px;
@@ -43,7 +43,7 @@ select {
   border-bottom: none;
 }
 .city-name {
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .date {
@@ -52,7 +52,7 @@ select {
 }
 
 .city-time {
-  font-size: 42px;
+  font-size: 36px;
 }
 
 small {

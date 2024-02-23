@@ -29,7 +29,7 @@ select {
   justify-content: space-between;
   padding-bottom: 30px;
   padding-top: 30px;
-  border-bottom: 1px dashed rgba(128, 128, 128, 0.183) ;
+  border-bottom: 1px dashed rgba(128, 128, 128, 0.183);
 }
 
 .city:last-child {

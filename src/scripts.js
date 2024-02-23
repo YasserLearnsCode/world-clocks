@@ -25,6 +25,33 @@ function updateTime() {
       "hh:mm:ss [<small>]A[<small>]"
     );
   }
+
+  //Abidjan
+
+  let abidjanElement = document.querySelector("#js-abidjan");
+  if (abidjanElement) {
+    let abidjanDateElement = document.querySelector("#js-abidjan-date");
+    let abidjanTimeElement = document.querySelector("#js-abidjan-time");
+    let abidjanTimezone = moment().tz("Africa/Abidjan");
+
+    abidjanDateElement.innerHTML = abidjanTimezone.format("MMMM Do, YYYY");
+    abidjanTimeElement.innerHTML = abidjanTimezone.format(
+      "hh:mm:ss [<small>]A[<small>]"
+    );
+  }
+
+  //New York
+  let newYorkElement = document.querySelector("#js-new-york");
+  if (newYorkElement) {
+    let newYorkDateElement = document.querySelector("#js-new-york-date");
+    let newYorkTimeElement = document.querySelector("#js-new-york-time");
+    let newYorkTimezone = moment().tz("America/New_York");
+
+    newYorkDateElement.innerHTML = newYorkTimezone.format("MMMM Do, YYYY");
+    newYorkTimeElement.innerHTML = newYorkTimezone.format(
+      "hh:mm:ss [<small>]A[<small>]"
+    );
+  }
 }
 updateTime();
 setInterval(updateTime, 1000);
@@ -32,7 +59,7 @@ setInterval(updateTime, 1000);
 function updateCities(event) {
   let cityTimeZones = event.target.value;
 
-  if(cityTimeZones === "current"){
+  if (cityTimeZones === "current") {
     cityTimeZones = moment.tz.guess();
   }
   let cityTime = moment().tz(cityTimeZones);

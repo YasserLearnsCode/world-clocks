@@ -12,16 +12,16 @@ function updateTime() {
       "hh:mm:ss [<small>]A[<small>]"
     );
   }
-  //Vancouver
+  //Calgary
 
-  let vancouverElement = document.querySelector("#js-vancouver");
-  if (vancouverElement) {
-    let vancouverDateElement = document.querySelector("#js-vancouver-date");
-    let vancouverTimeElement = document.querySelector("#js-vancouver-time");
-    let vancouverTimezone = moment().tz("America/Vancouver");
+  let calgaryElement = document.querySelector("#js-calgary");
+  if (calgaryElement) {
+    let calgaryDateElement = document.querySelector("#js-calgary-date");
+    let calgaryTimeElement = document.querySelector("#js-calgary-time");
+    let calgaryTimezone = moment().tz("Canada/Mountain");
 
-    vancouverDateElement.innerHTML = vancouverTimezone.format("MMMM Do, YYYY");
-    vancouverTimeElement.innerHTML = vancouverTimezone.format(
+    calgaryDateElement.innerHTML = calgaryTimezone.format("MMMM Do, YYYY");
+    calgaryTimeElement.innerHTML = calgaryTimezone.format(
       "hh:mm:ss [<small>]A[<small>]"
     );
   }
@@ -62,18 +62,17 @@ function updateCities(event) {
   if (cityTimeZones === "current") {
     cityTimeZones = moment.tz.guess();
   }
+
   let cityTime = moment().tz(cityTimeZones);
   let cityName = cityTimeZones.replace("_", " ").split("/")[1];
   let citiesElement = document.querySelector("#js-all-cities");
   citiesElement.innerHTML = `   
-      <div class="city" id="js-nairobi">
+      <div class="city">
         <div class="name">
           <span class="city-name">${cityName}</span> <br />
-          <span class="date" id="js-nairobi-date">${cityTime.format(
-            "MMMM Do, YYYY"
-          )}</span>
+          <span class="date">${cityTime.format("MMMM Do, YYYY")}</span>
         </div>
-        <div class="city-time" id="js-nairobi-time">
+        <div class="city-time">
           ${cityTime.format("hh:mm:ss [<small>]A[<small>]")}
         </div>
       </div>
